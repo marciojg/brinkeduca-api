@@ -8,21 +8,21 @@ if (port == null || port == '') {
 }
 
 app.listen(port, ()=> {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at PORT ${port}`)
 })
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('BrinkEduca')
 })
 
 app.get('/students', (req, res)=>{
   res.send({
-    cats: [
-      { name: 'Sofia',    rm: 553 }, 
-      { name: 'Giovanna', rm: 251 }, 
+    students: [
+      { name: 'Sofia',    rm: 553  }, 
+      { name: 'Giovanna', rm: 251  }, 
       { name: 'Estevan',  rm: 1894 }, 
       { name: 'Marcos',   rm: 1632 }, 
-      { name: 'Livia',    rm: 544 }, 
+      { name: 'Livia',    rm: 544  }, 
     ],
   })
 })
